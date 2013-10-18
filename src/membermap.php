@@ -18,9 +18,10 @@ if ($user->data['user_id'] == ANONYMOUS)
     login_box('', $user->lang['LOGIN']);
 }
 
+// Recuperation de l'id de l'utilisateur a localiser
 $locatedUser = request_var('locate','');
 
-// Passage de l'id de l'utilisateur au template
+// Passage des ids au template
 $template->assign_var("USER_ID",$user->data['user_id']);
 $template->assign_var("LOCATE_USER",$locatedUser);
 
