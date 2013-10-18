@@ -14,11 +14,14 @@ if ($user->data['user_id'] == ANONYMOUS)
 {
     login_box('', $user->lang['LOGIN']);
 }
-$userid		= request_var('userid', ANONYMOUS);
-$long		= request_var('long', '');
+
+// Recuperation des parametres
+$userid	= request_var('userid', ANONYMOUS);
+$long	= request_var('long', '');
 $lat	= request_var('lat', '');
 
 if ($userid != ANONYMOUS && $long != '' && lat != '') {
+	// Update des donnees de localisation dans la table des champs personnalises de profils
 	$sql = "update ". PROFILE_FIELDS_DATA_TABLE . " set pf_longitude = '".$long."', pf_latitude ='".$lat."' where user_id=".$userid;        
 	$result = $db->sql_query($sql);
 	$db->sql_freeresult($result);
