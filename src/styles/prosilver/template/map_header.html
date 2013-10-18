@@ -34,7 +34,7 @@
 	      about phpBB please visit http://www.phpbb.com
 -->
 
-<!-- GoogleMaps Scripts --> 
+<!-- phpBBMemberGmap : GoogleMaps Apis --> 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 
 <script type="text/javascript">
@@ -81,24 +81,24 @@
 		}
 	}
 
-// Begin script for membermap
+// Begin script for phpBBMemberGmap 
             var map;
             var geocoder = new google.maps.Geocoder();
             var forum_userid='{USER_ID}';
             var locate_userid='{LOCATE_USER}';
             var template_path='{T_TEMPLATE_PATH}/..';
   
-// End script for membermap
+// End script for phpBBMemberGmap
 
 // ]]>
 </script>
 <script type="text/javascript" src="{T_SUPER_TEMPLATE_PATH}/styleswitcher.js"></script>
 <script type="text/javascript" src="{T_SUPER_TEMPLATE_PATH}/forum_fn.js"></script>
 
-<!-- script carte des membres -->
+<!-- Begin script phpBBMemberGmap -->
 <script type="text/javascript" src="{T_TEMPLATE_PATH}/script/jquery.min.js"></script>
 <script type="text/javascript" src="{T_TEMPLATE_PATH}/script/membermap.js"></script>
-<!-- fin script carte des membres -->
+<!-- End script phpBBMemberGmap -->
 
 <link href="{T_THEME_PATH}/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
 <link href="{T_STYLESHEET_LINK}" rel="stylesheet" type="text/css" media="screen, projection" />
